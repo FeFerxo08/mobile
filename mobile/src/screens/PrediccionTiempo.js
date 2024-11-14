@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-const PredictionScreen = () => {
+const PredictionScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
       {/* Selección de grupo de edad */}

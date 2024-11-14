@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-const ComparisonScreen = () => {
+const ComparisonScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
       {/* Header */}

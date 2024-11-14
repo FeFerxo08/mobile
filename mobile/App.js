@@ -4,6 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {
+  createStaticNavigation,
+  useNavigation,
+} from '@react-navigation/native';
 import Home from './src/screens/Home';
 import Reports from './src/screens/Reports';
 import Monitor from './src/screens/Monitor';
@@ -14,6 +18,9 @@ import Login from './src/screens/Login';
 import TiempoEstimado from './src/screens/TiempoEstimado';
 import PrediccionCompe from './src/screens/PrediccionCompe';
 import Fortalezas from "./src/screens/Fortalezas";
+import ComparisonScreen from "./src/screens/Comparacion";
+import PredictionScreen from "./src/screens/PrediccionTiempo";
+import ProgressScreen from "./src/screens/Progresos";
 
 
 const Tab = createBottomTabNavigator();
@@ -53,6 +60,7 @@ const MainTab = () => {
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+
   return (
     <NativeBaseProvider>
       <NavigationContainer>
@@ -67,8 +75,10 @@ const App = () => {
           <Stack.Screen name="TiempoEstimado" component={TiempoEstimado} />
           <Stack.Screen name="PrediccionCompe" component={PrediccionCompe} />
           <Stack.Screen name="Fortalezas" component={Fortalezas} />
-          
-          
+          <Stack.Screen name="ComparisonScreen" component={ComparisonScreen} />
+          <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
+          <Stack.Screen name="ProgressScreen" component={ProgressScreen} /> 
+
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

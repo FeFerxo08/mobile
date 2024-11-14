@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 
-const ProgressScreenP = () => {
+const ProgressScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
       {/* Encabezado con nombre */}
