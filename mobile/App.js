@@ -14,7 +14,7 @@ import Login from './src/screens/Login';
 import TiempoEstimado from './src/screens/TiempoEstimado';
 import PrediccionCompe from './src/screens/PrediccionCompe';
 import Fortalezas from "./src/screens/Fortalezas";
-import Comparacion from "./src/screens/Comparacion";
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -67,7 +67,7 @@ const App = () => {
           <Stack.Screen name="TiempoEstimado" component={TiempoEstimado} />
           <Stack.Screen name="PrediccionCompe" component={PrediccionCompe} />
           <Stack.Screen name="Fortalezas" component={Fortalezas} />
-          <Stack.Screen name="Comparasion" component={Comparacion} />
+          
           
         </Stack.Navigator>
       </NavigationContainer>
