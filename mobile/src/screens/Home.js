@@ -2,28 +2,28 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
-    // Array con el texto específico para cada botón
-    const buttonTexts = [
-        "Tiempo estimado", 
-        "Comparación con Benchmarks", 
-        "Predicción en Competencia", 
-        "Predicción de Tiempo",
-        "Fortalezas y debilidades", 
-        "Comparación de estilos con Benchmarks", 
-        "Tiempo estimado de estilo", 
+    // Array con el texto específico para cada botón y sus destinos
+    const buttons = [
+        { text: "Tiempo estimado", screen: "TiempoEstimado" },
+        { text: "Comparación con Benchmarks", screen: "BenchmarkComparison" },
+        { text: "Predicción en Competencia", screen: "PrediccionCompe" },
+        { text: "Predicción de Tiempo", screen: "TiempoPrediction" },
+        { text: "Fortalezas y debilidades", screen: "Fortalezas" },
+        { text: "Comparación de estilos con Benchmarks", screen: "StyleComparison" },
+        { text: "Tiempo estimado de estilo", screen: "StyleTimeEstimation" },
     ];
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Pantalla de Inicio</Text>
             <View style={styles.grid}>
-                {buttonTexts.map((text, index) => (
+                {buttons.map((button, index) => (
                     <TouchableOpacity
                         key={index}
                         style={styles.button}
-                        onPress={() => navigation.navigate(`Screen${index + 1}`)}
+                        onPress={() => navigation.navigate(button.screen)}
                     >
-                        <Text style={styles.buttonText}>{text}</Text>
+                        <Text style={styles.buttonText}>{button.text}</Text>
                     </TouchableOpacity>
                 ))}
             </View>

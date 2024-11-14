@@ -11,6 +11,9 @@ import Profile from './src/screens/Profile';
 import Config from './src/screens/Config';
 import Register from './src/screens/Register';
 import Login from './src/screens/Login';
+import TiempoEstimado from './src/screens/TiempoEstimado';
+import PrediccionCompe from './src/screens/PrediccionCompe';
+import Fortalezas from "./src/screens/Fortalezas";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -60,6 +63,9 @@ const App = () => {
             {() => <Register setIsAuthenticated={setIsAuthenticated} />}
           </Stack.Screen>
           <Stack.Screen name="MainTab" component={MainTab} options={{ headerShown: false }} />
+          <Stack.Screen name="TiempoEstimado" component={TiempoEstimado} />
+          <Stack.Screen name="PrediccionCompe" component={PrediccionCompe} />
+          <Stack.Screen name="Fortalezas" component={Fortalezas} />
           
         </Stack.Navigator>
       </NavigationContainer>
