@@ -5,12 +5,11 @@ const HomeScreen = ({ navigation }) => {
     // Array con el texto específico para cada botón y sus destinos
     const buttons = [
         { text: "Tiempo estimado", screen: "TiempoEstimado" },
-        { text: "Comparación con Benchmarks", screen: "BenchmarkComparison" },
+        { text: "Comparación con Benchmarks", screen: "Comparacion" },
         { text: "Predicción en Competencia", screen: "PrediccionCompe" },
         { text: "Predicción de Tiempo", screen: "TiempoPrediction" },
         { text: "Fortalezas y debilidades", screen: "Fortalezas" },
-        { text: "Comparación de estilos con Benchmarks", screen: "StyleComparison" },
-        { text: "Tiempo estimado de estilo", screen: "StyleTimeEstimation" },
+        { text: "Progresos", screen: "Progresos" },
     ];
 
     return (
